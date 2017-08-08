@@ -3,25 +3,23 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
 	<script src="js/angular.js"></script>
 </head>
-<body ng-controller="mainController" ng-init="repayementCalc(15090, 7, 48)">
+<body ng-controller="mainController" >
 	<div class="container">
-		<div class="title">
-			<div class="title__logo"></div>
-			<h1>Car Loan Repayment Calculator</h1>
-			<span class="title__backlink">Powered by<br><a href="https://www.glimp.co.nz/mortgage/mortgage-calculator"> Glimp</a></span>
+		<div class="top-bg">
+			<div class="repayment"><span>${{repayementCalc(loanAmount, interestRate, (loanTerm * 12))}}</span></div>	
+			<div class="icon"></div>
 		</div>
 		<form class="form">
-			
+			<input type="range" min="100000" max="200000" step="1000" ng-init="loanAmount = 20000" ng-model="loanAmount">
+			<input type="range" min="1" max="5" step="1000" ng-init="loanTerm = 2" ng-model="loanTerm">
+			<input type="text" ng-model="interestRate" ng-init="interestRate = 4">
 		</form>
-		<div class="repayment">
-			<span>Repayments of </span>
-		</div>
 	</div>
 </body>

@@ -1,5 +1,5 @@
+$color1: #662D91;
 $color3: #D6EBF8;
-$color1: #90C133;
 $color2: #103353;
 
 $purple: #662D91;
@@ -42,4 +42,156 @@ html, body {
 	margin: 0 0 0 0;
 	box-sizing: border-box;
 }
+
+.container {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	// padding: 0 10px 0 10px;
+}
+
+.top-bg {
+	width: 100%;
+	height: 30%;
+	background-color: $color1;
+	position: absolute;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+}
+
+.icon {
+	@include center-vertical;
+	background-image: url('../imgs/car.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0 20px 0 0;
+	right: 0;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	-webkit-filter: invert(100%);
+	filter: invert(100%);
+}
+
+.repayment {
+	@include center-vertical;
+	position: relative;
+	margin: 0 0 0 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	font-size: 3em;
+	color: white;
+	display: inline-block;
+}
+
+form {
+	@include center;
+	width: 100%;
+	position: relative;
+}
+
+input {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	margin: 10px 0 0 0;
+}
+
+input[type=range] {
+	@include center-horizontal;
+	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+	background: transparent; /* Otherwise white in Chrome */
+	width: 90%;
+	position: relative;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	top: 50%;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: #000000;
+  border-radius: 25px;
+  border: 0px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 21px;
+  width: 21px;
+  border-radius: 6px;
+  background: #ff5aff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #080808;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: #000000;
+  border-radius: 25px;
+  border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 21px;
+  width: 21px;
+  border-radius: 6px;
+  background: #ff5aff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 21px;
+  width: 21px;
+  border-radius: 6px;
+  background: #ff5aff;
+  cursor: pointer;
+  height: 5px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #000000;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #080808;
+}
+
 

@@ -1,6 +1,12 @@
-var carloansApp = angular.module('carloansApp', []);
+var carLoansApp = angular.module('carLoansApp', []);
 
-carloansApp.controller('mainController', ["$scope", function($scope) {
+carLoansApp.controller('mainController', ["$scope", function($scope) {
 
+
+	$scope.repayementCalc = function(loanAmount, interestRate, numberMonths) {
+		monthlyRate = (interestRate/12) / 100
+		var test =  monthlyRate * (Math.pow((1 + monthlyRate), numberMonths))
+		console.log(test)
+	}
 
 }])

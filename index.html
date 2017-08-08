@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="carloansApp">
+<html ng-app="carLoansApp">
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,11 +10,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
 	<script src="js/angular.js"></script>
 </head>
-<body ng-controller="mainController">
+<body ng-controller="mainController" ng-init="repayementCalc(15090, 7, 48)">
 	<div class="container">
 		<div class="title">
 			<div class="title__logo"></div>
-			<h1>Car Loan Replayment Calculator</h1>
+			<h1>Car Loan Repayment Calculator</h1>
 			<span class="title__backlink">Powered by<br><a href="https://www.glimp.co.nz/mortgage/mortgage-calculator"> Glimp</a></span>
 		</div>
 		<form class="form">

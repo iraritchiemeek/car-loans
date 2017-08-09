@@ -2,7 +2,8 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0 0 0 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
 
 .container {
   height: 100%;
@@ -49,7 +50,14 @@ form {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box; }
+  form span {
+    display: inline-block;
+    position: relative; }
+  form span.right {
+    float: right; }
 
 input {
   position: relative;
@@ -91,7 +99,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 21px;
   width: 21px;
   border-radius: 6px;
-  background: #ff5aff;
+  background: #662D91;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -8px; }
@@ -110,7 +118,7 @@ input[type=range]::-moz-range-thumb {
   height: 21px;
   width: 21px;
   border-radius: 6px;
-  background: #ff5aff;
+  background: #662D91;
   cursor: pointer; }
 
 input[type=range]::-ms-track {
@@ -133,7 +141,7 @@ input[type=range]::-ms-thumb {
   height: 21px;
   width: 21px;
   border-radius: 6px;
-  background: #ff5aff;
+  background: #662D91;
   cursor: pointer;
   height: 5px; }
 

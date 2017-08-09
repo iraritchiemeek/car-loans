@@ -13,40 +13,42 @@
 </head>
 <body ng-controller="mainController" >
 	<div class="container">
-		<div class="top-bg">
+		<div class="top">
 			<div class="logo"></div>
 			<div class="icon"></div>
 		</div>
-		<form class="form">
-			<div class="form__item">				
-				<span class="left">Borrow Amount</span>
-				<span class="right">${{loanAmount | number}}</span>
-				<input type="range" min="3000" max="100000" step="1000" ng-init="loanAmount = 20000" ng-model="loanAmount">
-			</div>
-			<div class="form__item">				
-				<span class="left">Loan Term</span>
-				<span ng-show="loanTerm < 2" class="right">{{loanTerm}} Year</span>
-				<span ng-show="loanTerm > 1" class="right">{{loanTerm}} Years</span>
-				<input type="range" min="1" max="5" step="1" ng-init="loanTerm = 2" ng-model="loanTerm">
-			</div>
-			<div class="form__item">				
-				<span class="left">Repayments</span>
-				<span ng-show="frequency == 1" class="right">Weekly</span>
-				<span ng-show="frequency == 2" class="right">Fortnightly</span>
-				<span ng-show="frequency == 3" class="right">Monthly</span>
-				<input type="range" min="1" max="3" step="1" ng-init="frequency = 3" ng-model="frequency">
-			</div>
-			<div class="form__item">				
-				<span class="left">Interest Rate</span>
-				<span class="right">9.95% p.a.</span>
-			</div>
-		</form>
-		<div class="bottom-bg">
+		<!-- <div class="middle">		 -->
+			<form class="form">
+				<div class="form__item">				
+					<span class="left">Borrow Amount</span>
+					<span class="right">${{loanAmount | number}}</span>
+					<input type="range" min="3000" max="100000" step="1000" ng-init="loanAmount = 20000" ng-model="loanAmount">
+				</div>
+				<div class="form__item">				
+					<span class="left">Loan Term</span>
+					<span ng-show="loanTerm < 2" class="right">{{loanTerm}} Year</span>
+					<span ng-show="loanTerm > 1" class="right">{{loanTerm}} Years</span>
+					<input type="range" min="1" max="5" step="1" ng-init="loanTerm = 2" ng-model="loanTerm">
+				</div>
+				<div class="form__item">				
+					<span class="left">Repayments</span>
+					<span ng-show="frequency == 1" class="right">Weekly</span>
+					<span ng-show="frequency == 2" class="right">Fortnightly</span>
+					<span ng-show="frequency == 3" class="right">Monthly</span>
+					<input type="range" min="1" max="3" step="1" ng-init="frequency = 3" ng-model="frequency">
+				</div>
+				<div class="form__item">				
+					<span class="left">Interest Rate</span>
+					<span class="right">9.95% p.a.</span>
+				</div>
+			</form>
+		<!-- </div> -->
+		<div class="bottom">
 			<div class="repayment">
 				<span>You could own your car for</span>
 				<br>
-				<span ng-show="frequency == 1" id="amount">${{repayementCalc(loanAmount, 9.95, (loanTerm * 12)) /4 | number : 0}}</span>
-				<span ng-show="frequency == 2" id="amount">${{repayementCalc(loanAmount, 9.95, (loanTerm * 12)) /2 | number : 0}}</span>
+				<span ng-show="frequency == 1" id="amount">${{repayementCalc(loanAmount, 9.95, (loanTerm * 12)) /4.34524 | number : 0}}</span>
+				<span ng-show="frequency == 2" id="amount">${{repayementCalc(loanAmount, 9.95, (loanTerm * 12)) /4.34524 * 2 | number : 0}}</span>
 				<span ng-show="frequency == 3" id="amount">${{repayementCalc(loanAmount, 9.95, (loanTerm * 12)) | number : 0}}</span>
 				<span ng-show="frequency == 1"> a week</span>
 				<span ng-show="frequency == 2"> fortnightly</span>
